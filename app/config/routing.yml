@@ -1,0 +1,19 @@
+# ==========================================================
+# CONFIG GENERIC APPLICATION
+# ==========================================================
+index:
+    resource: "@AppBundle/Controller/"
+    prefix: /api
+    type: rest
+
+api_user_security_login:
+    path:      /api/login
+
+gesdinet_jwt_refresh_token:
+    path:     /api/token
+    defaults: { _controller: gesdinet.jwtrefreshtoken:refresh }
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+

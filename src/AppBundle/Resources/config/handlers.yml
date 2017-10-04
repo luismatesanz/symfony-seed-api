@@ -1,0 +1,4 @@
+services:
+  handler.blog:
+      class: AppBundle\Handler\BlogHandler
+      arguments: ["@repository.blog"]

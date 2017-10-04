@@ -1,0 +1,7 @@
+services:
+  repository.user:
+      class: AppBundle\Repository\UserRepository
+      arguments: ["@doctrine.orm.entity_manager"]
+  repository.blog:
+      class: AppBundle\Repository\BlogRepository
+      arguments: ["@doctrine.orm.entity_manager"]

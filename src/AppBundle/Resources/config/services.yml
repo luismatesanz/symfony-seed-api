@@ -1,0 +1,14 @@
+parameters:
+  jms_serializer.camel_case_naming_strategy.class: AppBundle\Serializer\CamelCaseNamingStrategy
+
+services:
+  security.user.provider:
+    class: AppBundle\Security\UserProvider
+    arguments: ["@repository.user"]
+
+  pagination:
+    class: AppBundle\DependencyInjection\PaginationService
+    arguments: ["@router"]
+
+  serializer.custom:
+    class: AppBundle\DependencyInjection\SerializerCustomService
